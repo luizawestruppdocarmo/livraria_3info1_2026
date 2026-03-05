@@ -10,9 +10,10 @@ from rest_framework.routers import DefaultRouter
 from core.views import CategoriaViewSet, EditoraViewSet, UserViewSet
 
 router = DefaultRouter()
+
 router.register(r'categorias', CategoriaViewSet, basename='categorias')
-router.register(r'editoras', EditoraViewSet)
-router.register(r'users', UserViewSet, basename='users')
+router.register(r'editoras', EditoraViewSet, basename='editoras')
+router.register(r'usuarios', UserViewSet, basename='usuarios')
 
 urlpatterns = [
     path('admin/', admin.site.urls),
